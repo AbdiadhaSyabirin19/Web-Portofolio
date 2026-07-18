@@ -25,15 +25,15 @@
             transform: translate(-4px, -4px);
             box-shadow: 8px 8px 0px 0px var(--dark-charcoal);
         }
-       @keyframes marquee {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-50%); } 
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
         .animate-marquee {
             display: flex;
             width: max-content;
-            animation: marquee 10s linear infinite;
+            animation: marquee 25s linear infinite;
             will-change: transform; 
         }
 
@@ -42,6 +42,7 @@
             overflow: hidden;
             width: 100%;
             mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); 
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); 
         }
         @media (prefers-reduced-motion: reduce) {
             .animate-marquee { animation: none; }
@@ -69,7 +70,7 @@
         <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div class="order-2 md:order-1">
                 <span class="bg-[#5C7AEA] text-white px-4 py-1 rounded-full text-xs font-bold uppercase neo-border">Informatics Student</span>
-                <h1 class="text-4xl md:text-5xl font-black uppercase leading-tight mt-6 mb-6">Front-End<br> Web Developer</h1>
+                <h1 class="text-4xl md:text-5xl font-black uppercase leading-tight mt-6 mb-6">Junior Web Developer</h1>
                 <p class="text-lg font-medium opacity-80 mb-8 italic">
                     "I build user-friendly web interfaces where design meets functionality, turning ideas into impactful digital experiences."
                 </p>
@@ -79,8 +80,8 @@
             </div>
             <div class="order-1 md:order-2 flex justify-center">
                 <div class="relative">
-                    <div class="bg-[#F4A261] neo-border rounded-[40px] overflow-hidden w-150 md:w-100 h-150 md:h-100">
-                        <img src="assets/image.png" class="w-full grayscale mix-blend-multiply">
+                    <div class="bg-white neo-border rounded-[40px] overflow-hidden w-150 md:w-100 h-150 md:h-100">
+                        <img src="assets/foto_profil.png" class="w-full h-full object-cover">
                     </div>
                     <div class="absolute -top-5 -right-5 bg-white p-4 rounded-xl neo-border font-black rotate-12">Web Developer</div>
                 </div>
@@ -88,24 +89,33 @@
         </div>
     </section>
 
-    <div class="bg-[#2E2E2E] py-4 border-y-4 border-black overflow-hidden">
-        <div class="flex whitespace-nowrap animate-marquee">
-           <div class="marquee-wrapper bg-[#2E2E2E] py-4 border-y-4 border-black position">
-                <div class="animate-marquee">
-                    <div class="flex items-center gap-12 px-6">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="w-10 h-10 invert-[.8]">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="CSS3" class="w-10 h-10 invert-[.8]">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="JS" class="w-10 h-10 invert-[.8]">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React" class="w-10 h-10 invert-[.8]">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tailwindcss.svg" alt="Tailwind" class="w-10 h-10 invert-[.8]">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/typescript.svg" alt="TS" class="w-10 h-10 invert-[.8]">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub" class="w-10 h-10 invert-[.8]">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/figma.svg" alt="Figma" class="w-10 h-10 invert-[.8]">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python" class="w-10 h-10 invert-[.8]">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/bootstrap.svg" alt="Bootstrap" class="w-10 h-10 invert-[.8]">
-                        <span class="text-white font-black text-2xl uppercase">✦ TECH STACK</span>
-                    </div>
-                </div>
+    <div class="marquee-wrapper bg-[#2E2E2E] py-4 border-y-4 border-black">
+        <div class="animate-marquee gap-12">
+            <div class="flex items-center gap-12 px-6 shrink-0">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="CSS3" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="JS" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tailwindcss.svg" alt="Tailwind" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/figma.svg" alt="Figma" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/bootstrap.svg" alt="Bootstrap" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/php.svg" alt="php" class="w-10 h-10 invert-[.8]">
+                <span class="text-white font-black text-2xl uppercase">✦ TECH STACK</span>
+            </div>
+            <div class="flex items-center gap-12 px-6 shrink-0" aria-hidden="true">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="CSS3" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="JS" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tailwindcss.svg" alt="Tailwind" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/figma.svg" alt="Figma" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/bootstrap.svg" alt="Bootstrap" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/php.svg" alt="php" class="w-10 h-10 invert-[.8]">
+                <span class="text-white font-black text-2xl uppercase">✦ TECH STACK</span>
             </div>
         </div>
     </div>
@@ -116,26 +126,28 @@
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-white neo-border p-6 rounded-[30px] transition-all neo-card-hover">
                     <div class="bg-gray-200 rounded-2xl h-64 mb-6 neo-border overflow-hidden">
-                        <img src="https://via.placeholder.com/600x400" class="w-full h-full object-cover">
+                        <img src="assets/Inventaris_Dokumen.png" class="w-full h-full object-cover">
                     </div>
                     <div class="flex gap-2 mb-4">
-                        <span class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">HTML/CSS</span>
+                        <span class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">HTML</span>
+                        <span class="bg-[#5C7AEA] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">Tailwind CSS</span>
                         <span class="bg-[#5C7AEA] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">JS</span>
                     </div>
-                    <h3 class="text-2xl font-black uppercase mb-2">Portfolio Website V1</h3>
-                    <p class="opacity-70 text-sm mb-6">A personal branding website built with Tailwind CSS for high performance.</p>
-                    <a href="#" class="font-bold underline flex items-center gap-2">View Project <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                    <h3 class="text-2xl font-black uppercase mb-2">Desain Website Inventaris Prodi Teknik Informatika</h3>
+                    <p class="opacity-70 text-sm mb-6">Website Inventaris Prodi Teknik Informatika yang menerapkan teknologi HTML, Tailwind CSS, dan JavaScript.Untuk kemudahan dalam pengelolaan dokumen menerapkan nested accordion bertingkat.</p>
+                    <a href="https://siakred-ifutm.my.id/versi2/" class="font-bold underline flex items-center gap-2">View Project <i data-lucide="external-link" class="w-4 h-4"></i></a>
                 </div>
                 <div class="bg-white neo-border p-6 rounded-[30px] transition-all neo-card-hover">
                     <div class="bg-gray-200 rounded-2xl h-64 mb-6 neo-border overflow-hidden">
-                        <img src="https://via.placeholder.com/600x400" class="w-full h-full object-cover">
+                        <img src="assets/Football_Scouting.png" class="w-full h-full object-cover">
                     </div>
                     <div class="flex gap-2 mb-4">
-                        <span class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">UI/UX</span>
+                        <span class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">SVM</span>
+                        <span class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">streamlit</span>
                     </div>
-                    <h3 class="text-2xl font-black uppercase mb-2">E-Commerce UI Kit</h3>
-                    <p class="opacity-70 text-sm mb-6">Modern shopping experience design with focus on user conversion.</p>
-                    <a href="#" class="font-bold underline flex items-center gap-2">View Project <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                    <h3 class="text-2xl font-black uppercase mb-2">Scouting Posisi Pemain Sepak Bola</h3>
+                    <p class="opacity-70 text-sm mb-6">Prediksi posisi pemain sepak bola berdasarkan data statistik menggunakan SVM.</p>
+                    <a href="https://abdiadhasyabirin19-football-scouting-app-zwxsmg.streamlit.app/" class="font-bold underline flex items-center gap-2">View Project <i data-lucide="external-link" class="w-4 h-4"></i></a>
                 </div>
             </div>
         </div>
@@ -149,28 +161,28 @@
                     <div class="aspect-video bg-gray-100 mb-4 neo-border rounded-lg overflow-hidden">
                         <img src="https://via.placeholder.com/300x200" class="w-full">
                     </div>
-                    <p class="font-black text-xs uppercase">Google IT Support</p>
+                    <p class="font-black text-xs uppercase"></p>
                     <p class="text-[10px] opacity-60">December 2025</p>
                 </div>
                 <div class="bg-white p-4 rounded-2xl neo-border neo-card-hover">
                     <div class="aspect-video bg-gray-100 mb-4 neo-border rounded-lg overflow-hidden">
                         <img src="https://via.placeholder.com/300x200" class="w-full">
                     </div>
-                    <p class="font-black text-xs uppercase">Tailwind Expert</p>
+                    <p class="font-black text-xs uppercase"></p>
                     <p class="text-[10px] opacity-60">October 2025</p>
                 </div>
                 <div class="bg-white p-4 rounded-2xl neo-border neo-card-hover">
                     <div class="aspect-video bg-gray-100 mb-4 neo-border rounded-lg overflow-hidden">
                         <img src="https://via.placeholder.com/300x200" class="w-full">
                     </div>
-                    <p class="font-black text-xs uppercase">Advanced JS</p>
+                    <p class="font-black text-xs uppercase"></p>
                     <p class="text-[10px] opacity-60">June 2025</p>
                 </div>
                 <div class="bg-white p-4 rounded-2xl neo-border neo-card-hover">
                     <div class="aspect-video bg-gray-100 mb-4 neo-border rounded-lg overflow-hidden">
                         <img src="https://via.placeholder.com/300x200" class="w-full">
                     </div>
-                    <p class="font-black text-xs uppercase">UI/UX Design Master</p>
+                    <p class="font-black text-xs uppercase"></p>
                     <p class="text-[10px] opacity-60">Jan 2025</p>
                 </div>
             </div>
