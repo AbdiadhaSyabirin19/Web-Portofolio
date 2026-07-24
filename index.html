@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Custom Content</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
@@ -14,49 +16,69 @@
             --accent-blue: #5C7AEA;
             --dark-charcoal: #2E2E2E;
         }
-        body { 
+
+        body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-light);
             color: var(--dark-charcoal);
         }
-        .neo-border { border: 3px solid var(--dark-charcoal); }
-        .neo-shadow { box-shadow: 6px 6px 0px 0px var(--dark-charcoal); }
+
+        .neo-border {
+            border: 3px solid var(--dark-charcoal);
+        }
+
+        .neo-shadow {
+            box-shadow: 6px 6px 0px 0px var(--dark-charcoal);
+        }
+
         .neo-card-hover:hover {
             transform: translate(-4px, -4px);
             box-shadow: 8px 8px 0px 0px var(--dark-charcoal);
         }
+
         @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
 
         .animate-marquee {
             display: flex;
             width: max-content;
             animation: marquee 25s linear infinite;
-            will-change: transform; 
+            will-change: transform;
         }
 
         .marquee-wrapper {
             display: flex;
             overflow: hidden;
             width: 100%;
-            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); 
-            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); 
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
         }
+
         @media (prefers-reduced-motion: reduce) {
-            .animate-marquee { animation: none; }
+            .animate-marquee {
+                animation: none;
+            }
         }
+
         /* Hide scrollbar for Chrome, Safari and Opera */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
     </style>
 </head>
+
 <body>
 
     <nav class="px-8 md:px-16 lg:px-24 py-6 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center bg-white neo-border px-6 md:px-8 py-4 rounded-full relative">
+        <div
+            class="container mx-auto flex justify-between items-center bg-white neo-border px-6 md:px-8 py-4 rounded-full relative">
             <div class="text-xl font-extrabold flex items-center gap-2">
                 <div class="w-6 h-6 bg-[#F4A261] rounded-full neo-border"></div> AbdSybrn_
             </div>
@@ -69,12 +91,15 @@
                 <a href="#contact" class="bg-[#2E2E2E] text-white px-4 py-2 rounded-full">Contact Me</a>
             </div>
             <!-- Mobile Menu Toggle Button -->
-            <button id="menu-btn" class="lg:hidden text-[#2E2E2E] hover:text-[#F4A261] focus:outline-none flex items-center" aria-label="Toggle Menu">
+            <button id="menu-btn"
+                class="lg:hidden text-[#2E2E2E] hover:text-[#F4A261] focus:outline-none flex items-center"
+                aria-label="Toggle Menu">
                 <i data-lucide="menu" class="menu-icon w-6 h-6"></i>
                 <i data-lucide="x" class="close-icon w-6 h-6 hidden"></i>
             </button>
             <!-- Mobile Menu Dropdown -->
-            <div id="mobile-menu" class="hidden absolute top-[110%] left-0 right-0 bg-white neo-border rounded-3xl p-6 flex flex-col space-y-4 font-bold uppercase text-xs text-center shadow-lg lg:hidden z-50">
+            <div id="mobile-menu"
+                class="hidden absolute top-[110%] left-0 right-0 bg-white neo-border rounded-3xl p-6 flex flex-col space-y-4 font-bold uppercase text-xs text-center shadow-lg lg:hidden z-50">
                 <a href="#about" class="hover:text-[#F4A261] py-2 border-b border-gray-100">About</a>
                 <a href="#projects" class="hover:text-[#F4A261] py-2 border-b border-gray-100">Projects</a>
                 <a href="#certificate" class="hover:text-[#F4A261] py-2 border-b border-gray-100">Certificates</a>
@@ -87,21 +112,29 @@
     <section id="about" class="py-12 md:py-20 px-8 md:px-16 lg:px-24">
         <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div class="order-2 md:order-1">
-                <span class="bg-[#5C7AEA] text-white px-4 py-1 rounded-full text-xs font-bold uppercase neo-border">Informatics Student</span>
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-black uppercase leading-tight mt-6 mb-6">Junior Web Developer</h1>
+                <span
+                    class="bg-[#5C7AEA] text-white px-4 py-1 rounded-full text-xs font-bold uppercase neo-border">Informatics
+                    Student</span>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-black uppercase leading-tight mt-6 mb-6">Junior Web
+                    Developer</h1>
                 <p class="text-lg font-medium opacity-80 mb-8 italic">
-                    "I build user-friendly web interfaces where design meets functionality, turning ideas into impactful digital experiences."
+                    "I build user-friendly web interfaces where design meets functionality, turning ideas into impactful
+                    digital experiences."
                 </p>
                 <div class="bg-white p-6 rounded-3xl neo-border neo-shadow">
-                    <p class="font-bold">As an Informatics student, I am continuously developing my skills in web development, focusing on creating intuitive and user-friendly interfaces across web platforms.</p>
+                    <p class="font-bold">As an Informatics student, I am continuously developing my skills in web
+                        development, focusing on creating intuitive and user-friendly interfaces across web platforms.
+                    </p>
                 </div>
             </div>
             <div class="order-1 md:order-2 flex justify-center">
                 <div class="relative">
-                    <div class="bg-white neo-border rounded-[40px] overflow-hidden aspect-square w-full max-w-[280px] sm:max-w-[320px] md:max-w-[400px]">
+                    <div
+                        class="bg-white neo-border rounded-[40px] overflow-hidden aspect-square w-full max-w-[280px] sm:max-w-[320px] md:max-w-[400px]">
                         <img src="assets/foto_profil.png" class="w-full h-full object-cover">
                     </div>
-                    <div class="absolute -top-5 -right-5 bg-white p-4 rounded-xl neo-border font-black rotate-12">Web Developer</div>
+                    <div class="absolute -top-5 -right-5 bg-white p-4 rounded-xl neo-border font-black rotate-12">Web
+                        Developer</div>
                 </div>
             </div>
         </div>
@@ -110,29 +143,49 @@
     <div class="marquee-wrapper bg-[#2E2E2E] py-4 border-y-4 border-black">
         <div class="animate-marquee gap-12">
             <div class="flex items-center gap-12 px-6 shrink-0">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="CSS3" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="JS" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tailwindcss.svg" alt="Tailwind" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/figma.svg" alt="Figma" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/bootstrap.svg" alt="Bootstrap" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/php.svg" alt="php" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="CSS3"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="JS"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tailwindcss.svg" alt="Tailwind"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/figma.svg" alt="Figma"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/bootstrap.svg" alt="Bootstrap"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/php.svg" alt="php"
+                    class="w-10 h-10 invert-[.8]">
                 <span class="text-white font-black text-2xl uppercase">✦ TECH STACK</span>
             </div>
             <div class="flex items-center gap-12 px-6 shrink-0" aria-hidden="true">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="CSS3" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="JS" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tailwindcss.svg" alt="Tailwind" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/figma.svg" alt="Figma" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/bootstrap.svg" alt="Bootstrap" class="w-10 h-10 invert-[.8]">
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/php.svg" alt="php" class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/html5.svg" alt="HTML5"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/css3.svg" alt="CSS3"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/javascript.svg" alt="JS"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/react.svg" alt="React"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/tailwindcss.svg" alt="Tailwind"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/github.svg" alt="GitHub"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/figma.svg" alt="Figma"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/python.svg" alt="Python"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/bootstrap.svg" alt="Bootstrap"
+                    class="w-10 h-10 invert-[.8]">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/php.svg" alt="php"
+                    class="w-10 h-10 invert-[.8]">
                 <span class="text-white font-black text-2xl uppercase">✦ TECH STACK</span>
             </div>
         </div>
@@ -144,10 +197,14 @@
             <div class="flex justify-between items-center mb-12">
                 <h2 class="text-3xl md:text-5xl font-black uppercase">Projects</h2>
                 <div class="flex gap-4">
-                    <button id="project-prev-btn" class="w-12 h-12 bg-white text-[#2E2E2E] rounded-full flex items-center justify-center neo-border neo-shadow hover:translate-y-[-2px] active:translate-y-[0px] transition" aria-label="Previous Project">
+                    <button id="project-prev-btn"
+                        class="w-12 h-12 bg-white text-[#2E2E2E] rounded-full flex items-center justify-center neo-border neo-shadow hover:translate-y-[-2px] active:translate-y-[0px] transition"
+                        aria-label="Previous Project">
                         <i data-lucide="chevron-left" class="w-6 h-6"></i>
                     </button>
-                    <button id="project-next-btn" class="w-12 h-12 bg-white text-[#2E2E2E] rounded-full flex items-center justify-center neo-border neo-shadow hover:translate-y-[-2px] active:translate-y-[0px] transition" aria-label="Next Project">
+                    <button id="project-next-btn"
+                        class="w-12 h-12 bg-white text-[#2E2E2E] rounded-full flex items-center justify-center neo-border neo-shadow hover:translate-y-[-2px] active:translate-y-[0px] transition"
+                        aria-label="Next Project">
                         <i data-lucide="chevron-right" class="w-6 h-6"></i>
                     </button>
                 </div>
@@ -155,66 +212,113 @@
 
             <!-- Carousel Container -->
             <div class="relative overflow-hidden py-6 -my-6">
-                <div id="project-carousel" class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar py-6 -my-6" style="-ms-overflow-style: none; scrollbar-width: none;">
+                <div id="project-carousel"
+                    class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar py-6 -my-6"
+                    style="-ms-overflow-style: none; scrollbar-width: none;">
                     <!-- Project 1 -->
-                    <div class="bg-white neo-border p-6 rounded-[30px] transition-all neo-card-hover snap-start shrink-0 w-full sm:w-[360px]">
-                        <div class="bg-gray-200 rounded-2xl h-48 mb-6 neo-border overflow-hidden">
-                            <img src="assets/Inventaris_Dokumen.png" class="w-full h-full object-cover">
+                    <div
+                        class="bg-white neo-border p-6 rounded-[30px] transition-all neo-card-hover snap-start shrink-0 w-full sm:w-[360px] flex flex-col justify-between">
+                        <div>
+                            <div class="bg-gray-200 rounded-2xl h-48 mb-6 neo-border overflow-hidden">
+                                <img src="assets/Inventaris_Dokumen.png" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">HTML</span>
+                                <span
+                                    class="bg-[#5C7AEA] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">Tailwind
+                                    CSS</span>
+                                <span
+                                    class="bg-[#5C7AEA] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">JS</span>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-black uppercase mb-2 line-clamp-2 h-12 flex items-center">Inventory Management Website Design - TIF</h3>
+                            <div class="mb-6">
+                                <p class="project-desc opacity-70 text-xs line-clamp-3 overflow-hidden transition-all duration-300">Designed and developed an inventory management website for the Informatics Engineering Department at Universitas Trunojoyo Madura, implementing a multi-level nested accordion interface to simplify document organization and improve accessibility.</p>
+                                <button onclick="toggleReadMore(this)" class="read-more-btn text-[#5C7AEA] text-[10px] font-black uppercase tracking-wider mt-1 hover:underline focus:outline-none">Read More</button>
+                            </div>
                         </div>
-                        <div class="flex gap-2 mb-4">
-                            <span class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">HTML</span>
-                            <span class="bg-[#5C7AEA] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">Tailwind CSS</span>
-                            <span class="bg-[#5C7AEA] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">JS</span>
-                        </div>
-                        <h3 class="text-xl font-black uppercase mb-2 line-clamp-1">Desain Website Inventaris Prodi</h3>
-                        <p class="opacity-70 text-xs mb-6 h-12 overflow-hidden text-ellipsis line-clamp-3">Website Inventaris Prodi Teknik Informatika dengan nested accordion bertingkat untuk kemudahan manajemen dokumen.</p>
-                        <a href="https://siakred-ifutm.my.id/versi2/" class="font-bold underline flex items-center gap-2 text-xs">View Project <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                        <a href="https://siakred-ifutm.my.id/versi2/"
+                            class="font-bold underline flex items-center gap-2 text-xs mt-auto">View Project <i
+                                data-lucide="external-link" class="w-4 h-4"></i></a>
                     </div>
 
                     <!-- Project 2 -->
-                    <div class="bg-white neo-border p-6 rounded-[30px] transition-all neo-card-hover snap-start shrink-0 w-full sm:w-[360px]">
-                        <div class="bg-gray-200 rounded-2xl h-48 mb-6 neo-border overflow-hidden">
-                            <img src="assets/Football_Scouting.png" class="w-full h-full object-cover">
+                    <div
+                        class="bg-white neo-border p-6 rounded-[30px] transition-all neo-card-hover snap-start shrink-0 w-full sm:w-[360px] flex flex-col justify-between">
+                        <div>
+                            <div class="bg-gray-200 rounded-2xl h-48 mb-6 neo-border overflow-hidden">
+                                <img src="assets/Football_Scouting.png" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">ML</span>
+                                <span
+                                    class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">Random
+                                    Forest</span>
+                                <span
+                                    class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">Football</span>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-black uppercase mb-2 line-clamp-2 h-12 flex items-center">Football Player Position Prediction</h3>
+                            <div class="mb-6">
+                                <p class="project-desc opacity-70 text-xs line-clamp-3 overflow-hidden transition-all duration-300">Developed a machine learning model to predict football players' positions based on performance statistics using the Random Forest algorithm.</p>
+                                <button onclick="toggleReadMore(this)" class="read-more-btn text-[#5C7AEA] text-[10px] font-black uppercase tracking-wider mt-1 hover:underline focus:outline-none">Read More</button>
+                            </div>
                         </div>
-                        <div class="flex gap-2 mb-4">
-                            <span class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">SVM</span>
-                            <span class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">Streamlit</span>
-                        </div>
-                        <h3 class="text-xl font-black uppercase mb-2 line-clamp-1">Scouting Posisi Pemain Bola</h3>
-                        <p class="opacity-70 text-xs mb-6 h-12 overflow-hidden text-ellipsis line-clamp-3">Prediksi posisi pemain sepak bola berdasarkan data statistik performa menggunakan Support Vector Machine (SVM).</p>
-                        <a href="https://abdiadhasyabirin19-football-scouting-app-zwxsmg.streamlit.app/" class="font-bold underline flex items-center gap-2 text-xs">View Project <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                        <a href="https://abdiadhasyabirin19-football-scouting-app-zwxsmg.streamlit.app/"
+                            class="font-bold underline flex items-center gap-2 text-xs mt-auto">View Project <i
+                                data-lucide="external-link" class="w-4 h-4"></i></a>
                     </div>
 
                     <!-- Project 3 -->
-                    <div class="bg-white neo-border p-6 rounded-[30px] transition-all neo-card-hover snap-start shrink-0 w-full sm:w-[360px]">
-                        <div class="bg-gray-200 rounded-2xl h-48 mb-6 neo-border overflow-hidden">
-                            <img src="assets/klasifikasi_PCG.png" class="w-full h-full object-cover">
+                    <div
+                        class="bg-white neo-border p-6 rounded-[30px] transition-all neo-card-hover snap-start shrink-0 w-full sm:w-[360px] flex flex-col justify-between">
+                        <div>
+                            <div class="bg-gray-200 rounded-2xl h-48 mb-6 neo-border overflow-hidden">
+                                <img src="assets/klasifikasi_PCG.png" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">ML</span>
+                                <span
+                                    class="bg-[#5C7AEA] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">SVM</span>
+                                <span
+                                    class="bg-[#5C7AEA] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">Spectogram</span>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-black uppercase mb-2 line-clamp-2 h-12 flex items-center">Heart Sound Classification</h3>
+                            <div class="mb-6">
+                                <p class="project-desc opacity-70 text-xs line-clamp-3 overflow-hidden transition-all duration-300">Developed a machine learning model to classify heart sounds (Phonocardiograms/PCG) using Support Vector Machine (SVM) and spectrogram-based feature extraction for the early detection of heart valve abnormalities.</p>
+                                <button onclick="toggleReadMore(this)" class="read-more-btn text-[#5C7AEA] text-[10px] font-black uppercase tracking-wider mt-1 hover:underline focus:outline-none">Read More</button>
+                            </div>
                         </div>
-                        <div class="flex gap-2 mb-4">
-                            <span class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">PCG</span>
-                            <span class="bg-[#5C7AEA] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">Random Forest</span>
-                        </div>
-                        <h3 class="text-xl font-black uppercase mb-2 line-clamp-1">Klasifikasi Sinyal Audio PCG</h3>
-                        <p class="opacity-70 text-xs mb-6 h-12 overflow-hidden text-ellipsis line-clamp-3">Klasifikasi suara jantung (Phonocardiogram - PCG) menggunakan Random Forest untuk mendeteksi kelainan katup jantung secara dini.</p>
-                        <span class="font-bold text-gray-400 flex items-center gap-2 text-xs">Coming Soon <i data-lucide="clock" class="w-4 h-4"></i></span>
+                        <a href="https://deteksisuarajantung.streamlit.app/"
+                            class="font-bold underline flex items-center gap-2 text-xs mt-auto">View Project <i
+                                data-lucide="external-link" class="w-4 h-4"></i></a>
                     </div>
 
                     <!-- Project 4 -->
-                    <div class="bg-white neo-border p-6 rounded-[30px] transition-all neo-card-hover snap-start shrink-0 w-full sm:w-[360px]">
-                        <div class="bg-gray-200 rounded-2xl h-48 mb-6 neo-border overflow-hidden flex items-center justify-center bg-gray-100">
-                            <div class="text-[#2E2E2E] flex flex-col items-center gap-2">
-                                <i data-lucide="code-2" class="w-12 h-12 opacity-40"></i>
-                                <span class="text-[10px] font-black uppercase tracking-wider opacity-60">Web Application</span>
+                    <div
+                        class="bg-white neo-border p-6 rounded-[30px] transition-all neo-card-hover snap-start shrink-0 w-full sm:w-[360px] flex flex-col justify-between">
+                        <div>
+                            <div class="bg-gray-200 rounded-2xl h-48 mb-6 neo-border overflow-hidden">
+                                <img src="assets/daily-notes.png" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex gap-2 mb-4">
+                                <span
+                                    class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">Laravel</span>
+                                <span
+                                    class="bg-[#5C7AEA] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">Tailwind</span>
+                                <span
+                                    class="bg-[#5C7AEA] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">MySQL</span>
+                            </div>
+                            <h3 class="text-base sm:text-lg font-black uppercase mb-2 line-clamp-2 h-12 flex items-center">Daily Notes Website</h3>
+                            <div class="mb-6">
+                                <p class="project-desc opacity-70 text-xs line-clamp-3 overflow-hidden transition-all duration-300">A web-based journaling application designed to help users document their daily experiences, thoughts, and activities. The application features a clean and intuitive interface, allowing users to securely manage notes, track their mood, organize entries by category, and easily revisit past records.</p>
+                                <button onclick="toggleReadMore(this)" class="read-more-btn text-[#5C7AEA] text-[10px] font-black uppercase tracking-wider mt-1 hover:underline focus:outline-none">Read More</button>
                             </div>
                         </div>
-                        <div class="flex gap-2 mb-4">
-                            <span class="bg-[#F4A261] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">React</span>
-                            <span class="bg-[#5C7AEA] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">Tailwind</span>
-                            <span class="bg-[#5C7AEA] text-white px-3 py-1 rounded-full text-[10px] font-bold neo-border uppercase">Node.js</span>
-                        </div>
-                        <h3 class="text-xl font-black uppercase mb-2 line-clamp-1">E-Commerce Application</h3>
-                        <p class="opacity-70 text-xs mb-6 h-12 overflow-hidden text-ellipsis line-clamp-3">Platform e-commerce modern dengan manajemen keranjang belanja, otentikasi user, dan payment gateway.</p>
-                        <span class="font-bold text-gray-400 flex items-center gap-2 text-xs">Coming Soon <i data-lucide="clock" class="w-4 h-4"></i></span>
+                        <a href="https://daily-notes-jpk3.onrender.com/"
+                            class="font-bold underline flex items-center gap-2 text-xs mt-auto">View Project <i
+                                data-lucide="external-link" class="w-4 h-4"></i></a>
                     </div>
                 </div>
             </div>
@@ -223,35 +327,46 @@
 
     <section id="certificate" class="py-16 md:py-24 px-8 md:px-16 lg:px-24 bg-[#5C7AEA]/10">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-5xl font-black uppercase mb-12 text-center">Certificates</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-white p-4 rounded-2xl neo-border neo-card-hover">
-                    <div class="aspect-video bg-gray-100 mb-4 neo-border rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/300x200" class="w-full">
-                    </div>
-                    <p class="font-black text-xs uppercase"></p>
-                    <p class="text-[10px] opacity-60">December 2025</p>
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-black uppercase">Certificates</h2>
+                <div class="flex gap-4">
+                    <button id="cert-prev-btn"
+                        class="w-12 h-12 bg-white text-[#2E2E2E] rounded-full flex items-center justify-center neo-border neo-shadow hover:translate-y-[-2px] active:translate-y-[0px] transition"
+                        aria-label="Previous Certificate">
+                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                    </button>
+                    <button id="cert-next-btn"
+                        class="w-12 h-12 bg-white text-[#2E2E2E] rounded-full flex items-center justify-center neo-border neo-shadow hover:translate-y-[-2px] active:translate-y-[0px] transition"
+                        aria-label="Next Certificate">
+                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                    </button>
                 </div>
-                <div class="bg-white p-4 rounded-2xl neo-border neo-card-hover">
-                    <div class="aspect-video bg-gray-100 mb-4 neo-border rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/300x200" class="w-full">
+            </div>
+
+            <div class="relative overflow-hidden py-6 -my-6">
+                <div id="cert-carousel"
+                    class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar py-6 -my-6"
+                    style="-ms-overflow-style: none; scrollbar-width: none;">
+
+                    <div
+                        class="bg-white neo-border p-5 rounded-[30px] transition-all neo-card-hover snap-start shrink-0 w-full sm:w-[320px] flex flex-col justify-between">
+                        <div>
+                            <div class="aspect-video bg-gray-100 mb-4 neo-border rounded-2xl overflow-hidden">
+                                <img src="assets/Screenshot 2026-07-24 194739.png" alt="Certificate Image"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-lg font-black uppercase mb-1 line-clamp-1">Website Fundamentals</h3>
+                            <p class="text-xs font-bold text-[#5C7AEA] mb-3">MySkill.id</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-2 pt-3 border-t border-gray-100">
+                            <p class="text-[10px] font-black opacity-60">July 2026</p>
+                            <span
+                                class="text-[9px] font-black uppercase px-2 py-0.5 bg-gray-100 rounded-full border border-gray-200">Verified</span>
+                        </div>
                     </div>
-                    <p class="font-black text-xs uppercase"></p>
-                    <p class="text-[10px] opacity-60">October 2025</p>
-                </div>
-                <div class="bg-white p-4 rounded-2xl neo-border neo-card-hover">
-                    <div class="aspect-video bg-gray-100 mb-4 neo-border rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/300x200" class="w-full">
-                    </div>
-                    <p class="font-black text-xs uppercase"></p>
-                    <p class="text-[10px] opacity-60">June 2025</p>
-                </div>
-                <div class="bg-white p-4 rounded-2xl neo-border neo-card-hover">
-                    <div class="aspect-video bg-gray-100 mb-4 neo-border rounded-lg overflow-hidden">
-                        <img src="https://via.placeholder.com/300x200" class="w-full">
-                    </div>
-                    <p class="font-black text-xs uppercase"></p>
-                    <p class="text-[10px] opacity-60">Jan 2025</p>
+
+
+
                 </div>
             </div>
         </div>
@@ -260,20 +375,123 @@
     <section id="organisasi" class="py-16 md:py-24 px-8 md:px-16 lg:px-24">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-3xl md:text-5xl font-black uppercase mb-12 italic">Experience</h2>
-            <div class="space-y-6">
-                <div class="bg-white p-8 rounded-3xl neo-border flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:bg-[#F4A261] hover:text-white group">
-                    <div>
-                        <h4 class="text-2xl font-black uppercase">Wargalab TIF UTM</h4>
-                        <p class="font-bold opacity-70 group-hover:opacity-100">Practicum Assistant & Laboratory Administrator</p>
+            <div class="space-y-8">
+                <!-- Wargalab TIF UTM -->
+                <div
+                    class="bg-white p-6 md:p-8 rounded-3xl neo-border flex flex-col gap-6 transition-all duration-300 hover:bg-[#F4A261] hover:text-white hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_#2E2E2E] group cursor-pointer">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                        <div>
+                            <h4 class="text-2xl font-black uppercase">Wargalab TIF UTM</h4>
+                            <p class="font-bold opacity-70 group-hover:opacity-100">Practicum Assistant & Laboratory
+                                Administrator</p>
+                        </div>
+                        <div class="text-sm font-black px-4 py-1 bg-white text-black neo-border rounded-full shrink-0">
+                            Jul 2024 - Now</div>
                     </div>
-                    <div class="text-sm font-black px-4 py-1 bg-white text-black neo-border rounded-full">Jul 2024 - Sekarang</div>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-5 gap-6 pt-6 border-t-2 border-dashed border-gray-200 group-hover:border-white/50 transition-colors">
+                        <div class="md:col-span-3 flex flex-col justify-between gap-4">
+                            <p class="text-sm font-semibold leading-relaxed opacity-85 group-hover:opacity-100">
+                                Guided and mentored students during laboratory practical sessions.
+                                Provided academic consultations and technical support to help students resolve technical
+                                issues and better understand practical course materials.
+                                Managed the day-to-day operations of the Informatics Engineering Laboratory.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs font-bold px-3 py-1 bg-gray-100 text-[#2E2E2E] rounded-full border border-gray-300 group-hover:bg-white group-hover:border-transparent">Asistant
+                                    Practicum</span>
+                                <span
+                                    class="text-xs font-bold px-3 py-1 bg-gray-100 text-[#2E2E2E] rounded-full border border-gray-300 group-hover:bg-white group-hover:border-transparent">Lab
+                                    Admin</span>
+                                <span
+                                    class="text-xs font-bold px-3 py-1 bg-gray-100 text-[#2E2E2E] rounded-full border border-gray-300 group-hover:bg-white group-hover:border-transparent">Mentoring</span>
+                            </div>
+                        </div>
+                        <div
+                            class="md:col-span-2 relative overflow-hidden rounded-2xl neo-border aspect-video w-full bg-gray-100">
+                            <img src="assets/wargalab.jpeg" alt="Wargalab TIF UTM"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-3xl neo-border flex flex-col md:flex-row justify-between items-start md:items-center gap-4 transition-all hover:bg-[#5C7AEA] hover:text-white group">
-                    <div>
-                        <h4 class="text-2xl font-black uppercase">UKMFT - ITC</h4>
-                        <p class="font-bold opacity-70 group-hover:opacity-100">Head of Education & Curriculum Division</p>
+
+                <!-- UKMFT - ITC -->
+                <div
+                    class="bg-white p-6 md:p-8 rounded-3xl neo-border flex flex-col gap-6 transition-all duration-300 hover:bg-[#5C7AEA] hover:text-white hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_#2E2E2E] group cursor-pointer">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                        <div>
+                            <h4 class="text-2xl font-black uppercase">UKMFT - ITC</h4>
+                            <p class="font-bold opacity-70 group-hover:opacity-100">Head of Education & Curriculum
+                                Division</p>
+                        </div>
+                        <div class="text-sm font-black px-4 py-1 bg-white text-black neo-border rounded-full shrink-0">
+                            Jan 2025 - Dec 2025</div>
                     </div>
-                    <div class="text-sm font-black px-4 py-1 bg-white text-black neo-border rounded-full">Jan 2025 - Dec 2025</div>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-5 gap-6 pt-6 border-t-2 border-dashed border-gray-200 group-hover:border-white/50 transition-colors">
+                        <div class="md:col-span-3 flex flex-col justify-between gap-4">
+                            <p class="text-sm font-semibold leading-relaxed opacity-85 group-hover:opacity-100">
+                                Led the Education & Curriculum Division by developing technology training programs for
+                                UKMFT ITC. Designed learning modules, facilitated technical training sessions, and
+                                contributed to enhancing the technical competencies of organization members.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs font-bold px-3 py-1 bg-gray-100 text-[#2E2E2E] rounded-full border border-gray-300 group-hover:bg-white group-hover:border-transparent">Curriculum</span>
+                                <span
+                                    class="text-xs font-bold px-3 py-1 bg-gray-100 text-[#2E2E2E] rounded-full border border-gray-300 group-hover:bg-white group-hover:border-transparent">Leadership</span>
+                                <span
+                                    class="text-xs font-bold px-3 py-1 bg-gray-100 text-[#2E2E2E] rounded-full border border-gray-300 group-hover:bg-white group-hover:border-transparent">Education</span>
+                            </div>
+                        </div>
+                        <div
+                            class="md:col-span-2 relative overflow-hidden rounded-2xl neo-border aspect-video w-full bg-gray-100">
+                            <img src="assets/Screenshot 2026-07-24 193305.png" alt="UKMFT - ITC"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CV Andando Avanti -->
+                <div
+                    class="bg-white p-6 md:p-8 rounded-3xl neo-border flex flex-col gap-6 transition-all duration-300 hover:bg-[#2EC4B6] hover:text-white hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_#2E2E2E] group cursor-pointer">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                        <div>
+                            <h4 class="text-2xl font-black uppercase">CV Andando Avanti</h4>
+                            <p class="font-bold opacity-70 group-hover:opacity-100">Web Developer - Internship</p>
+                        </div>
+                        <div class="text-sm font-black px-4 py-1 bg-white text-black neo-border rounded-full shrink-0">
+                            Feb 2025 - Jun 2025</div>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-5 gap-6 pt-6 border-t-2 border-dashed border-gray-200 group-hover:border-white/50 transition-colors">
+                        <div class="md:col-span-3 flex flex-col justify-between gap-4">
+                            <p class="text-sm font-semibold leading-relaxed opacity-85 group-hover:opacity-100">
+                                Worked as a Web Developer Intern, developing and optimizing web applications for
+                                clients. Collaborated with the development team to write clean, maintainable code,
+                                perform testing, and integrate APIs into web applications.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-xs font-bold px-3 py-1 bg-gray-100 text-[#2E2E2E] rounded-full border border-gray-300 group-hover:bg-white group-hover:border-transparent">Web
+                                    Development</span>
+                                <span
+                                    class="text-xs font-bold px-3 py-1 bg-gray-100 text-[#2E2E2E] rounded-full border border-gray-300 group-hover:bg-white group-hover:border-transparent">API
+                                    Integration</span>
+                                <span
+                                    class="text-xs font-bold px-3 py-1 bg-gray-100 text-[#2E2E2E] rounded-full border border-gray-300 group-hover:bg-white group-hover:border-transparent">Teamwork</span>
+                            </div>
+                        </div>
+                        <div
+                            class="md:col-span-2 relative overflow-hidden rounded-2xl neo-border aspect-video w-full bg-gray-100">
+                            <img src="assets/WhatsApp Image 2026-06-03 at 08.45.24.jpeg" alt="CV Andando Avanti"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -283,79 +501,139 @@
         <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 class="text-4xl md:text-6xl font-black uppercase leading-tight mb-6">Let's <br> Collab!</h2>
-                <p class="text-sm md:text-base opacity-80 max-w-sm font-medium">Feel free to reach out for collaborations, project inquiries, or just to say hello! I'm always open to discussing new opportunities.</p>
+                <p class="text-sm md:text-base opacity-80 max-w-sm font-medium">Feel free to reach out for
+                    collaborations, project inquiries, or just to say hello! I'm always open to discussing new
+                    opportunities.</p>
             </div>
             <div class="bg-[#F5F2F2] p-6 md:p-8 rounded-[40px] neo-border text-[#2E2E2E] neo-shadow">
                 <h4 class="text-2xl font-black uppercase mb-6">Contact Me</h4>
                 <div class="flex flex-col gap-4">
                     <!-- WhatsApp -->
-                    <a href="https://wa.me/6285854324526" target="_blank" class="flex items-center justify-between p-4 bg-white border-2 border-[#2E2E2E] rounded-2xl transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_#2E2E2E] hover:bg-[#25D366] hover:text-white group">
+                    <a href="https://wa.me/6285854324526" target="_blank"
+                        class="flex items-center justify-between p-4 bg-white border-2 border-[#2E2E2E] rounded-2xl transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_#2E2E2E] hover:bg-[#25D366] hover:text-white group">
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-[#25D366] text-white rounded-xl flex items-center justify-center border-2 border-[#2E2E2E] group-hover:bg-white group-hover:text-[#25D366] transition shrink-0">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                            <div
+                                class="w-10 h-10 bg-[#25D366] text-white rounded-xl flex items-center justify-center border-2 border-[#2E2E2E] group-hover:bg-white group-hover:text-[#25D366] transition shrink-0">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                                </svg>
                             </div>
                             <div class="min-w-0">
-                                <p class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">WhatsApp</p>
+                                <p class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">WhatsApp
+                                </p>
                                 <p class="font-black text-xs md:text-sm uppercase truncate">Chat on WhatsApp</p>
                             </div>
                         </div>
-                        <svg class="w-5 h-5 transition group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                        <svg class="w-5 h-5 transition group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17L17 7"></path>
+                            <path d="M7 7h10v10"></path>
+                        </svg>
                     </a>
 
                     <!-- Email -->
-                    <a href="mailto:ahabirabdi@gmail.com" class="flex items-center justify-between p-4 bg-white border-2 border-[#2E2E2E] rounded-2xl transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_#2E2E2E] hover:bg-[#F4A261] hover:text-white group">
+                    <a href="mailto:ahabirabdi@gmail.com"
+                        class="flex items-center justify-between p-4 bg-white border-2 border-[#2E2E2E] rounded-2xl transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_#2E2E2E] hover:bg-[#F4A261] hover:text-white group">
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-[#F4A261] text-white rounded-xl flex items-center justify-center border-2 border-[#2E2E2E] group-hover:bg-white group-hover:text-[#F4A261] transition shrink-0">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                            <div
+                                class="w-10 h-10 bg-[#F4A261] text-white rounded-xl flex items-center justify-center border-2 border-[#2E2E2E] group-hover:bg-white group-hover:text-[#F4A261] transition shrink-0">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+                                </svg>
                             </div>
                             <div class="min-w-0">
                                 <p class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">Email</p>
                                 <p class="font-black text-xs md:text-sm uppercase truncate">ahabirabdi@gmail.com</p>
                             </div>
                         </div>
-                        <svg class="w-5 h-5 transition group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                        <svg class="w-5 h-5 transition group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17L17 7"></path>
+                            <path d="M7 7h10v10"></path>
+                        </svg>
                     </a>
 
                     <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/in/abdiadha-syabirin/" target="_blank" class="flex items-center justify-between p-4 bg-white border-2 border-[#2E2E2E] rounded-2xl transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_#2E2E2E] hover:bg-[#0A66C2] hover:text-white group">
+                    <a href="https://www.linkedin.com/in/abdiadha-syabirin/" target="_blank"
+                        class="flex items-center justify-between p-4 bg-white border-2 border-[#2E2E2E] rounded-2xl transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_#2E2E2E] hover:bg-[#0A66C2] hover:text-white group">
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-[#0A66C2] text-white rounded-xl flex items-center justify-center border-2 border-[#2E2E2E] group-hover:bg-white group-hover:text-[#0A66C2] transition shrink-0">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            <div
+                                class="w-10 h-10 bg-[#0A66C2] text-white rounded-xl flex items-center justify-center border-2 border-[#2E2E2E] group-hover:bg-white group-hover:text-[#0A66C2] transition shrink-0">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
                             </div>
                             <div class="min-w-0">
-                                <p class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">LinkedIn</p>
+                                <p class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">LinkedIn
+                                </p>
                                 <p class="font-black text-xs md:text-sm uppercase truncate">Abdiadha Syabirin</p>
                             </div>
                         </div>
-                        <svg class="w-5 h-5 transition group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                        <svg class="w-5 h-5 transition group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17L17 7"></path>
+                            <path d="M7 7h10v10"></path>
+                        </svg>
                     </a>
 
                     <!-- GitHub -->
-                    <a href="https://github.com/AbdiadhaSyabirin19" target="_blank" class="flex items-center justify-between p-4 bg-white border-2 border-[#2E2E2E] rounded-2xl transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_#2E2E2E] hover:bg-[#2E2E2E] hover:text-white group">
+                    <a href="https://github.com/AbdiadhaSyabirin19" target="_blank"
+                        class="flex items-center justify-between p-4 bg-white border-2 border-[#2E2E2E] rounded-2xl transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_#2E2E2E] hover:bg-[#2E2E2E] hover:text-white group">
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-[#2E2E2E] text-white rounded-xl flex items-center justify-center border-2 border-[#2E2E2E] group-hover:bg-white group-hover:text-[#2E2E2E] transition shrink-0">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            <div
+                                class="w-10 h-10 bg-[#2E2E2E] text-white rounded-xl flex items-center justify-center border-2 border-[#2E2E2E] group-hover:bg-white group-hover:text-[#2E2E2E] transition shrink-0">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                                </svg>
                             </div>
                             <div class="min-w-0">
                                 <p class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">GitHub</p>
                                 <p class="font-black text-xs md:text-sm uppercase truncate">AbdiadhaSyabirin19</p>
                             </div>
                         </div>
-                        <svg class="w-5 h-5 transition group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                        <svg class="w-5 h-5 transition group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17L17 7"></path>
+                            <path d="M7 7h10v10"></path>
+                        </svg>
                     </a>
 
                     <!-- Instagram -->
-                    <a href="https://www.instagram.com/abdsybrn_/" target="_blank" class="flex items-center justify-between p-4 bg-white border-2 border-[#2E2E2E] rounded-2xl transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_#2E2E2E] hover:bg-[#E1306C] hover:text-white group">
+                    <a href="https://www.instagram.com/abdsybrn_/" target="_blank"
+                        class="flex items-center justify-between p-4 bg-white border-2 border-[#2E2E2E] rounded-2xl transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_#2E2E2E] hover:bg-[#E1306C] hover:text-white group">
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-[#E1306C] text-white rounded-xl flex items-center justify-center border-2 border-[#2E2E2E] group-hover:bg-white group-hover:text-[#E1306C] transition shrink-0">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                            <div
+                                class="w-10 h-10 bg-[#E1306C] text-white rounded-xl flex items-center justify-center border-2 border-[#2E2E2E] group-hover:bg-white group-hover:text-[#E1306C] transition shrink-0">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                                </svg>
                             </div>
                             <div class="min-w-0">
-                                <p class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">Instagram</p>
+                                <p class="text-[10px] font-bold uppercase opacity-60 group-hover:opacity-100">Instagram
+                                </p>
                                 <p class="font-black text-xs md:text-sm uppercase truncate">@abdsybrn_</p>
                             </div>
                         </div>
-                        <svg class="w-5 h-5 transition group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg>
+                        <svg class="w-5 h-5 transition group-hover:translate-x-1 group-hover:-translate-y-1 shrink-0"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17L17 7"></path>
+                            <path d="M7 7h10v10"></path>
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -374,7 +652,7 @@
                 mobileMenu.classList.toggle('hidden');
                 const menuIcon = menuBtn.querySelector('.menu-icon');
                 const closeIcon = menuBtn.querySelector('.close-icon');
-                
+
                 if (mobileMenu.classList.contains('hidden')) {
                     menuIcon.classList.remove('hidden');
                     closeIcon.classList.add('hidden');
@@ -421,6 +699,46 @@
                 }
             });
         }
+
+        // Certificate Carousel Scrolling
+        const certPrevBtn = document.getElementById('cert-prev-btn');
+        const certNextBtn = document.getElementById('cert-next-btn');
+        const certCarousel = document.getElementById('cert-carousel');
+
+        if (certPrevBtn && certNextBtn && certCarousel) {
+            certPrevBtn.addEventListener('click', () => {
+                const card = certCarousel.querySelector('.shrink-0');
+                if (card) {
+                    const cardWidth = card.offsetWidth;
+                    const gap = 32; // gap-8 is 2rem (32px)
+                    certCarousel.scrollBy({ left: -(cardWidth + gap), behavior: 'smooth' });
+                }
+            });
+
+            certNextBtn.addEventListener('click', () => {
+                const card = certCarousel.querySelector('.shrink-0');
+                if (card) {
+                    const cardWidth = card.offsetWidth;
+                    const gap = 32; // gap-8 is 2rem (32px)
+                    certCarousel.scrollBy({ left: (cardWidth + gap), behavior: 'smooth' });
+                }
+            });
+        }
+
+        // Toggle Read More for Projects
+        function toggleReadMore(button) {
+            const desc = button.previousElementSibling;
+            if (desc.classList.contains('line-clamp-3')) {
+                desc.classList.remove('line-clamp-3');
+                desc.classList.remove('overflow-hidden');
+                button.innerText = 'Show Less';
+            } else {
+                desc.classList.add('line-clamp-3');
+                desc.classList.add('overflow-hidden');
+                button.innerText = 'Read More';
+            }
+        }
     </script>
 </body>
+
 </html>
